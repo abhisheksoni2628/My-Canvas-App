@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/color_pallete_shape"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/redColor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/color_shape_red"
+            />
+
+        <ImageButton
+            android:id="@+id/blueColor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/color_shape_blue"
+            />
+
+        <ImageButton
+            android:id="@+id/blackColor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/color_shape_black"
+            />
+
+        <ImageButton
+            android:id="@+id/colorSheet"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/colorsheet"
+            />
+
+        <ImageButton
+            android:id="@+id/whiteColor"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/color_shape_white"
+            />
+<!--        <ImageButton-->
+<!--            android:id="@+id/pencilSize"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:background="@drawable/baseline_edit_24"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            />-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/canvas_rLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <include layout="@layout/paint_view" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
